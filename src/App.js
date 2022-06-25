@@ -8,25 +8,28 @@ import Doctor from './components/Doctor/Doctor';
 import Contact from './components/Contact/Contact';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
+import AuthProvider from './context/AuthProvider';
 
 
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/doctors" element={<Doctor />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+      <AuthProvider>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/doctors" element={<Doctor />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
 
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </AuthProvider>
     </>
   );
 }

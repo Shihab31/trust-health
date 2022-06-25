@@ -1,0 +1,20 @@
+.doctor-img img {}
+
+.doctor-title {
+    margin-top: 140px;
+}
+
+.icon-size {
+    font-size: 50px;
+    color: #0B5ED7;
+}
+
+.doctor-info {
+    margin-top: 5px;
+}
+
+.doctor-info h4 {
+    color: #4B4E6C;
+    font-size: 18px;
+    margin: 0px;
+}
